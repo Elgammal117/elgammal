@@ -9,8 +9,8 @@ export const cv = {
   contact: {
     email: "elgammalm071@gmail.com",
     phone: "+20 1146207493",
-    linkedin: "[TBD]",
-    github: "[TBD]",
+    linkedin: "https://www.linkedin.com/in/mohammed-elgammal-956b2a306/",
+    github: "https://github.com/Elgammal117",
   },
   summary:
     "Flutter Developer with hands-on experience building and deploying mobile applications for freelance clients. Skilled in Flutter, Dart, Firebase, REST APIs, BLoC, Provider, MVVM, and Clean Architecture.",
@@ -99,7 +99,7 @@ export const cv = {
       description:
         "Health-focused mobile application that calculates daily calorie needs, generates personalized diet plans, tracks food intake, and monitors user progress over time.",
       impact: "End-to-end product: from API integration to state architecture to UX.",
-      link: "[TBD · GitHub]",
+      link: "https://github.com/Elgammal117/Healthy-app",
     },
     {
       id: "02",
@@ -109,7 +109,7 @@ export const cv = {
       description:
         "Food ordering application with menu browsing, product details, and online ordering functionality. Client-deployed.",
       impact: "Deployed for a freelance client; live in production.",
-      link: "[TBD · GitHub]",
+      link: "https://github.com/Elgammal117/Restaurant",
     },
     {
       id: "03",
