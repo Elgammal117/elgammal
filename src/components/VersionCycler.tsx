@@ -7,7 +7,7 @@ const versions = [
   {
     v: "v1.0",
     label: "Initial release",
-    notes: ["Hero, About, Skills, Experience, Projects, Contact", "Calm + deliberate + aesthetic positioning", "Preloader with signature entrance"],
+    notes: ["Hero, About, Skills, Experience, Projects, Contact", "Calm + deliberate + aesthetic positioning", "Hero with signature entrance"],
   },
   {
     v: "v1.1",

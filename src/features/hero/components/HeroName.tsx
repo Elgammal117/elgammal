@@ -3,14 +3,10 @@ import { cv } from "../../../data/cv";
 import { useEntranceAnimation } from "../hooks/useEntranceAnimation";
 import { useNameScramble } from "../../../components/useNameScramble";
 
-type Props = {
-  preloaderDone: boolean;
-};
-
-export default function HeroName({ preloaderDone }: Props) {
+export default function HeroName() {
   const nameRef = useRef<HTMLHeadingElement | null>(null);
-  useEntranceAnimation(nameRef, preloaderDone);
-  useNameScramble(nameRef, preloaderDone);
+  useEntranceAnimation(nameRef);
+  useNameScramble(nameRef, true);
 
   return (
     <h1

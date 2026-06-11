@@ -1,6 +1,6 @@
-import { useSectionReveal } from "../hooks/useSectionReveal";
-import { cv } from "../../data/cv";
-import { iconFor } from "../../lib/icons";
+import { useSectionReveal } from "../../hooks/useSectionReveal";
+import { cv } from "../../../data/cv";
+import ExpertiseCard from "./ExpertiseCard";
 
 export default function About() {
   const ref = useSectionReveal();
@@ -39,25 +39,14 @@ export default function About() {
             data-reveal
             className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-ink/10 mt-6 border hairline"
           >
-            {cv.expertise.map((e) => {
-              const Icon = iconFor(e.icon);
-              return (
-                <div
-                  key={e.label}
-                  className="bg-paper-elevated p-5 flex flex-col gap-2"
-                >
-                  <div className="flex items-center gap-2 text-ink">
-                    {Icon ? <Icon size={16} strokeWidth={1.5} /> : null}
-                    <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ink-dim">
-                      {e.label}
-                    </span>
-                  </div>
-                  <p className="font-sans text-sm text-ink-dim leading-relaxed">
-                    {e.description}
-                  </p>
-                </div>
-              );
-            })}
+            {cv.expertise.map((e) => (
+              <ExpertiseCard
+                key={e.label}
+                label={e.label}
+                description={e.description}
+                icon={e.icon}
+              />
+            ))}
           </div>
 
           <div

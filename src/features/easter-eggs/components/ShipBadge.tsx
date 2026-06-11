@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { prefersReducedMotion } from "../lib/utils";
-import { logEvent } from "../lib/eventLog";
+import { prefersReducedMotion } from "../../../lib/utils";
+import { logEvent } from "../../../lib/eventLog";
 
 const TARGET = "ship";
 

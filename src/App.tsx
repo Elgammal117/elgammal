@@ -1,12 +1,9 @@
-import { lazy, Suspense, useEffect, useState, useCallback } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import Lenis from "lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import StatusBar from "./components/StatusBar";
 import Sidebar from "./components/Sidebar";
-import Preloader from "./components/Preloader";
-import DevConsole from "./components/DevConsole";
-import ShipBadge from "./components/ShipBadge";
+import { DevConsole, ShipBadge, HotReloadBadge, DebugOverlay, CrashScreen } from "./features/easter-eggs";
 import Hero from "./features/hero";
 
 const About = lazy(() => import("./features/about"));
@@ -17,9 +14,8 @@ const Contact = lazy(() => import("./features/contact"));
 
 gsap.registerPlugin(ScrollTrigger);
 
-function useLenis(active: boolean) {
+function useLenis() {
   useEffect(() => {
-    if (!active) return;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced) return;
 
@@ -40,7 +36,7 @@ function useLenis(active: boolean) {
       lenis.destroy();
       gsap.ticker.remove(onTick);
     };
-  }, [active]);
+  }, []);
 }
 
 function SectionFallback() {
@@ -55,20 +51,18 @@ function SectionFallback() {
 }
 
 export default function App() {
-  const [preloaderDone, setPreloaderDone] = useState(false);
-  const handlePreloaderDone = useCallback(() => setPreloaderDone(true), []);
-
-  useLenis(preloaderDone);
+  useLenis();
 
   return (
     <>
-      {!preloaderDone && <Preloader onDone={handlePreloaderDone} />}
-      <StatusBar />
       <Sidebar />
       <DevConsole />
       <ShipBadge />
+      <HotReloadBadge />
+      <DebugOverlay />
+      <CrashScreen />
       <main>
-        <Hero preloaderDone={preloaderDone} />
+        <Hero />
         <Suspense fallback={<SectionFallback />}>
           <About />
         </Suspense>

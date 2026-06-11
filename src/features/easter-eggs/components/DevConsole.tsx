@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { cv } from "../data/cv";
-import { prefersReducedMotion } from "../lib/utils";
-import { logEvent, subscribeLog, type LogEntry } from "../lib/eventLog";
+import { cv } from "../../../data/cv";
+import { prefersReducedMotion } from "../../../lib/utils";
+import { logEvent, subscribeLog, type LogEntry } from "../../../lib/eventLog";
 
 const sections = ["hero", "about", "skills", "experience", "projects", "contact"];
 
