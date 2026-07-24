@@ -4,10 +4,13 @@ import { cv } from "../../../data/cv";
 export default function HeroActions() {
   return (
     <div className="flex flex-wrap items-center gap-3">
-      <MagneticButton
-        as="a"
-        href={`mailto:${cv.contact.email}`}
-        aria-label={`Email ${cv.person.preferredName ?? cv.person.name}`}
+   <MagneticButton
+        as="button"
+        onClick={() =>
+          document
+            .getElementById("contact")
+            ?.scrollIntoView({ behavior: "smooth" })
+        }
       >
         Get in touch
         <span aria-hidden>→</span>

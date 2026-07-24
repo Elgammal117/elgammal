@@ -1,7 +1,6 @@
 import Icon from "../../../components/Icon";
 import type { ExpertiseCardProps } from "../types";
-
-export default function ExpertiseCard({ label, description, icon }: ExpertiseCardProps) {
+export default function ExpertiseCard({ label, description, icon, image }: ExpertiseCardProps) {
   return (
     <div className="bg-paper-elevated p-5 flex flex-col gap-2">
       <div className="flex items-center gap-2 text-ink">
@@ -13,6 +12,8 @@ export default function ExpertiseCard({ label, description, icon }: ExpertiseCar
       <p className="font-sans text-sm text-ink-dim leading-relaxed">
         {description}
       </p>
+      
+      
     </div>
   );
 }

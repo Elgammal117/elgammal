@@ -1,9 +1,13 @@
-export const cv = {
+ import healthyApp from "../assets/healthy-app.jpg";
+import restaurant from "../assets/restaurant.jpeg";
+
+ 
+ export const cv = {
   person: {
     name: "Mohammed Hasan Elgammal",
     preferredName: "Mohammed",
     role: "Flutter Developer",
-    location: "Egypt",
+    location: "Egypt, Cairo",
     timezone: "Africa/Cairo",
   },
   contact: {
@@ -25,7 +29,7 @@ export const cv = {
       field: "Computer Science",
       startYear: 2022,
       endYear: 2026,
-      gpa: "3.5 / 4.0",
+      gpa: "3.3 / 4.0", 
     },
   ],
   certifications: [
@@ -38,6 +42,7 @@ export const cv = {
       description:
         "Production Flutter apps shipped to real users. Responsive UI, platform-native feel, performance-conscious.",
       icon: "Smartphone",
+      
     },
     {
       label: "Architecture",
@@ -100,6 +105,7 @@ export const cv = {
         "Health-focused mobile application that calculates daily calorie needs, generates personalized diet plans, tracks food intake, and monitors user progress over time.",
       impact: "End-to-end product: from API integration to state architecture to UX.",
       link: "https://github.com/Elgammal117/Healthy-app",
+      image: healthyApp,
     },
     {
       id: "02",
@@ -110,6 +116,7 @@ export const cv = {
         "Food ordering application with menu browsing, product details, and online ordering functionality. Client-deployed.",
       impact: "Deployed for a freelance client; live in production.",
       link: "https://github.com/Elgammal117/Restaurant",
+      image: restaurant,
     },
     {
       id: "03",
@@ -119,38 +126,12 @@ export const cv = {
       description:
         "Shopping application with product browsing, cart management, and online purchase workflows.",
       impact: "Full purchase flow: catalog → cart → checkout.",
-      link: "[TBD · GitHub]",
+      link: "https://github.com/Elgammal117/ecommerece",
+    
     },
-    {
-      id: "04",
-      title: "Real-Time Chat App",
-      role: "Flutter Developer",
-      stack: "Flutter · Dart · Firebase Realtime Database",
-      description:
-        "Real-time messaging and live data synchronization using Firebase Realtime Database.",
-      impact: "Live bidirectional sync with sub-second delivery.",
-      link: "[TBD · GitHub]",
-    },
-    {
-      id: "05",
-      title: "Weather App",
-      role: "Flutter Developer",
-      stack: "Flutter · Dart · Firebase · OpenWeatherMap API · Provider",
-      description:
-        "Weather application displaying location-based weather data using the OpenWeatherMap API.",
-      impact: "Location-aware data, async loading, error states.",
-      link: "[TBD · GitHub]",
-    },
-    {
-      id: "06",
-      title: "News App",
-      role: "Flutter Developer",
-      stack: "Flutter · Dart · REST APIs · Firebase · Provider",
-      description:
-        "News aggregation application with category filtering, article viewing, and saved articles functionality.",
-      impact: "Saved state, filter UX, multi-source aggregation.",
-      link: "[TBD · GitHub]",
-    },
+  
+    
+   
   ],
   experience: [
     {

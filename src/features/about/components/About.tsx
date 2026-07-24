@@ -20,7 +20,7 @@ export default function About() {
             About
           </div>
           <h2 className="font-display text-4xl md:text-5xl text-ink leading-[1.05] tracking-[-0.02em]">
-            Engineer-grade craft, not designer-grade expression.
+           Where Design Meets Performance.
           </h2>
         </div>
 
@@ -45,6 +45,7 @@ export default function About() {
                 label={e.label}
                 description={e.description}
                 icon={e.icon}
+                
               />
             ))}
           </div>
