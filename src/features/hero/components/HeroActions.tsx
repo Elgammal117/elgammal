@@ -1,5 +1,4 @@
 import MagneticButton from "../../../components/MagneticButton";
-import { cv } from "../../../data/cv";
 
 export default function HeroActions() {
   return (
